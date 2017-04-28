@@ -15,12 +15,16 @@ module.exports = function(app) {
   // In each of the below cases the user is shown an HTML page of content
   // ---------------------------------------------------------------------------
 
+//still needd to make sure if i'm getting it from survey
   app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/survey.html"));
+    res.sendFile(path.join(__dirname, "/../views/survey.html"));
   });
 
   // If no matching route is found default to home
   app.use(function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/home.html"));
+    console.log(path.join(__dirname, "")); 
+    console.log(process.cwd());
+    console.log(path.join(__dirname, "../views/home.html"))
+    res.sendFile(path.join(__dirname, "../views/home.html"));
   });
 };
