@@ -17,14 +17,14 @@ module.exports = function(app) {
 
 //still needd to make sure if i'm getting it from survey
   app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "/../views/survey.html"));
+    res.sendFile(path.join(__dirname, "/../public/survey.html"));
   });
 
   // If no matching route is found default to home
   app.use(function(req, res) {
     console.log(path.join(__dirname, "")); 
     console.log(process.cwd());
-    console.log(path.join(__dirname, "../views/home.html"))
-    res.sendFile(path.join(__dirname, "../views/home.html"));
+    console.log(path.join(__dirname, "../public/home.html"))
+    res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 };
