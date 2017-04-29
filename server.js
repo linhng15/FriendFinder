@@ -26,7 +26,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // ================================================================================
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
+app.use(express.static("./app/public"));;
 
 
 // ================================================================================
